@@ -1,6 +1,7 @@
 What is this project about
 =========
-This is just a pyhanlp demo. 
+This is just a pyhanlp web demo. 
+
 
 How to build
 ============
@@ -35,6 +36,7 @@ ToDo
 3. 功能完善，比如其他功能，如：
 不同分词算法区别、实体识别、短语提取、文本分类、文本聚类、情感分析、文本推荐、语义距离等Demo。
 部分需要扩展pyhanlp，方法与NLPTokenizer是一样的。
+4. 单元测试
 
 
 Reference
