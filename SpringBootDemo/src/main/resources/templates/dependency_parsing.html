@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>nlp.hankcs.com</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- <meta name="description" content="description here"> -->
+    <link rel="root" href=""/> <!-- for JS -->
+    <!-- Base jQuery-UI styles -->
+    <link rel="stylesheet" href="/css/visual/jquery-ui-redmond.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/visual/main.css">
+    <!-- CSS for embedded visualizations -->
+    <link rel="stylesheet" href="/css/visual/style-vis.css">
+
+    <!-- head.js, required for embedding -->
+    <script type="text/javascript" src="/js/visual/head.load.min.js"></script>
+
+    <style>
+        svg {
+            border: none;
+        }
+
+        .sentnum {
+            display: none;
+        }
+    </style>
+
+</head>
+
+
+<body>
+<pre style="margin: 10px;">
+<code class="language-ann" th:text="${ann}">
+
+</code>
+</pre>
+</body>
+
+<!-- support for embedded visualizations -->
+<script type="text/javascript">
+    var root = '/js/'; // filled in by jekyll
+    head.js(
+        // External libraries
+        root + 'visual/ext/jquery.min.js',
+        root + 'visual/ext/jquery.svg.min.js',
+        root + 'visual/ext/jquery.svgdom.min.js',
+        root + 'visual/ext/jquery-ui.min.js',
+        root + 'visual/ext/waypoints.min.js',
+        root + 'visual/ext/webfont.js',
+        // brat helper modules
+        root + 'visual/brat/configuration.js',
+        root + 'visual/brat/util.js',
+        root + 'visual/brat/annotation_log.js',
+        // brat main modules
+        root + 'visual/brat/dispatcher.js',
+        root + 'visual/brat/url_monitor.js',
+        root + 'visual/brat/visualizer.js',
+        // external parsing libraries
+        root + 'visual/local/conllu.js',
+        // annotation documentation support
+        root + 'visual/local/annodoc.js',
+        // project-specific collection data
+        root + 'visual/local/collections.js',
+        // project-specific configuration
+        root + 'visual/local/config.js'
+    );
+
+    root = '';
+    var webFontURLs = [
+//    root + 'fonts/PT_Sans-Caption-Web-Regular.ttf',
+//    root + 'fonts/Liberation_Sans-Regular.ttf'
+    ];
+
+    head.ready(function () {
+        // mark current collection (filled in by Jekyll)
+        Collections.listing['_current'] = '';
+
+        // performs all embedding and support functions
+        Annodoc.activate(Config.bratCollData, Collections.listing);
+            });
+</script>
+</html>

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: nlpdemo
+    admin:
+      enabled: false
+  main:
+    banner-mode: console
+  profiles: default
+
+
+server:
+  port: 5000
+
+
+logging:
+  file: nlpdemo.log 
+# path:
+  level:
+    root: INFO
+
+  
