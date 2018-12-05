@@ -1,0 +1,3 @@
+set JAVA_HOME=PATH_TO_JDK1.8
+set PATH=PATH_TO_PYTHON3.6;%PATH%
+python runme.py
