@@ -47,7 +47,7 @@ public class MyController {
 	    String urla = "/dependency_parsing_page?sentence=" + sentence_quote;
 	    String urlb = "/dependency_sentence_page?sentence=" + sentence_quote;
 	    
-	    mv.setViewName("/index");
+	    mv.setViewName("index");
 	    mv.addObject("sentence", sentence);
 		mv.addObject("terms", terms);
 		mv.addObject("keywords", keywords);
@@ -62,7 +62,7 @@ public class MyController {
 	ModelAndView  dependencyParsingPage(ModelAndView mv, @RequestParam(name="sentence",required=false) String sentence){
 	    logger.warn("/dependency_parsing_page"+sentence);
 	    String ann=NLPTokenizer.ANALYZER.analyze(sentence).translateCompoundWordLabels().toStandoff();
-	    mv.setViewName("/dependency_parsing");
+	    mv.setViewName("dependency_parsing");
 	    mv.addObject("ann", ann);
 	    return mv;
 	}
@@ -71,7 +71,7 @@ public class MyController {
 	ModelAndView  dependency_sentence_page(ModelAndView mv, @RequestParam(name="sentence",required=false) String sentence){
 		logger.warn("/dependency_sentence_page>>>"+sentence);
 	    String conll = HanLP.parseDependency(sentence).toString();
-	    mv.setViewName("/dependency_sentence");
+	    mv.setViewName("dependency_sentence");
 	    mv.addObject("conll", conll);
 	    logger.warn(conll);
 	    return mv;

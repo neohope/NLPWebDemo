@@ -1,5 +1,7 @@
 *.pyc
 *.log
+*.me.bat
+*.me.sh
 .idea
 .mvn
 .metadata

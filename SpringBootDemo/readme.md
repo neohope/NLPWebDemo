@@ -10,9 +10,11 @@ How to build
 
 4. install jdk1.8 x64 and set JAVA_HOME
 
-5. use ide like eclipse/idea to open the project
+5. install libs to mvn
 
-6. debug or run
+6. use ide like eclipse/idea to open the project
+
+7. debug or run
 
 
 ToDo
