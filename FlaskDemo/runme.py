@@ -48,6 +48,7 @@ def dependency_parsing_page():
     NLPTokenizer=SafeJClass('com.hankcs.hanlp.tokenizer.NLPTokenizer')
     """
     ann=NLPTokenizer.ANALYZER.analyze(sentence).translateCompoundWordLabels().toStandoff().__str__()
+    print(ann)
     message = {
             'ann': ann
     }
@@ -105,7 +106,7 @@ def dependency_parsing():
     词法分析
     """
     sentence = request.args["sentence"]
-    print("/dependency_parsing"+sentence)
+    print("/dependency_parsing>>>"+sentence)
     """
     需要修改pyhanlp文件，增加一行
     NLPTokenizer=SafeJClass('com.hankcs.hanlp.tokenizer.NLPTokenizer')
