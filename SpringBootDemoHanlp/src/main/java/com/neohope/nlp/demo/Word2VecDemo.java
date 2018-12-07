@@ -15,7 +15,7 @@ public class Word2VecDemo
 
     static void printNearest(String word, WordVectorModel model)
     {
-        System.out.printf("\n                                                Word     Cosine\n------------------------------------------------------------------------\n");
+        System.out.printf("\n                                                Word     Cosine\n>>>>>>>>>>>>>>\n");
         for (Map.Entry<String, Float> entry : model.nearest(word))
         {
             System.out.printf("%50s\t\t%f\n", entry.getKey(), entry.getValue());
@@ -33,7 +33,7 @@ public class Word2VecDemo
 
     private static void printHeader(String query)
     {
-        System.out.printf("\n%50s          Cosine\n------------------------------------------------------------------------\n", query);
+        System.out.printf("\n%50s          Cosine\n>>>>>>>>>>>>>>\n", query);
     }
 
     static WordVectorModel trainOrLoadModel() throws IOException
