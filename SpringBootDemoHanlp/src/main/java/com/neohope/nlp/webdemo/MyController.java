@@ -1,4 +1,4 @@
-package com.neohope.nlp.demo;
+package com.neohope.nlp.webdemo;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

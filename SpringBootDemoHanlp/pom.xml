@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.neohope.nlp.demo</groupId>
-	<artifactId>SpringBootDemo</artifactId>
+	<artifactId>SpringBootDemoHanlp</artifactId>
 	<version>0.1.0</version>
 	<packaging>jar</packaging>
 

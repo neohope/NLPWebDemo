@@ -4,6 +4,6 @@ set PATH=%JAVA_HOME%\bin;%MVN_HOME%\bin;%PATH%
 
 REM package and start server
 REM mvn package -DskipTests=true
-REM java -jar target/SpringBootDemo-0.1.0.jar
+REM java -jar target/SpringBootDemoHanlp-0.1.0.jar
 
 cmd

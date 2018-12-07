@@ -9,8 +9,10 @@
 .vscode
 __pycache__
 downloads
+HanLP
 output
 target
 Servers
 /FlaskDemoLTP/Data
+/SpringBootDemoHanlp/Data
 RemoteSystemsTempFiles
