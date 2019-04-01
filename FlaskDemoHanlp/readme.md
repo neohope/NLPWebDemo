@@ -5,7 +5,7 @@ This is just a pyhanlp web demo.
 
 How to build
 ============
-1. install pythoy 3.6+ x64
+1. install python 3.6+ x64
 
 2. install packages
 
